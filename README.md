@@ -4,19 +4,19 @@ The source code in this repository corresponds to our paper submitted to __The V
 We propose a novel 6D pose estimation method via hybrid representations and multi-feature fusion for complex industrial assembly.In the first stage, an initial pose estimation module based on multi-task learning is proposed. This module predicts hybrid representations, including sparse keypoint heatmaps, keypoint relational vectors, keypoint visibilities, semantic edges, and semantic masks of parts. RANSAC+PnP is employed to obtain initial pose estimates. In the second stage, a multi-feature fusion pose optimization method is proposed, which combines learned high-dimensional semantic features with extracted general features and performs iterative optimization to obtain accurate pose results. For multi-object pose estimation in assembly scenarios, a structural constraint strategy is employed to correct the poses.
 ![Proposed method](https://github.com/nengbinlv/HRMFPose/blob/main/assets/framework.png)
 # Environment Installation
-## python
+- ## python
 ```
 conda create --name HRMFPose python=3.8
 conda activate HRMFPose
 # install the pytorch version compatible with the your cuda version
 pip install -r requirements.txt
 ```
-## c++
+- ## c++
 Install Visual Studio 2017
 Install Eigen 3, GLEW, GLFW 3, and OpenCV 4
 For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObjectTracking/tree/master?tab=readme-ov-file).
 # Data Preparation
-## Assembly dataset
+- ## Assembly dataset
 
 Download the [assembly dataset](https://pan.baidu.com/s/1UG-D8e1sRRKKn6bi9PeXKg) with extraction code:```6rtd```. Extract it into the ```data``` folder. The file structure is as follows:
 ```
@@ -42,25 +42,25 @@ ${PROJECT_ROOT}
          ...
 ```
 ```gt.yml``` and ```pose_final.yml``` represent the ground truth poses. ```part_01.txt``` defines the keypoints of the target. ```model``` contains the 3D model. Other folders store the corresponding images.
-## Mono6D dataset
+- ## Mono6D dataset
 
 The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://pan.baidu.com/s/14xmeC0hvZp09ajlMMEdmWw). (Extraction code: ```jnsy```).
 # Train
-## Train assembly dataset
+- ## Train assembly dataset
 Run the following script
 ```
 python main_assembly.py --class_type part_02 --batch_size 6 --train True --epochs 150 --eval False
 ```
-## Train Mono6D dataset
+- ## Train Mono6D dataset
 ```
 python main_Mono6D.py --class_type Bracket --batch_size 6 --train True --epochs 150 --eval False
 ```
 # Evaluation
-## Evaluate assembly dataset
+- ## Evaluate assembly dataset
 ```
 python main_assembly.py --class_type part_02 --batch_size 1 --train False ----used_epoch 150 --eval True
 ```
-## Evaluate Mono6D dataset
+- ## Evaluate Mono6D dataset
 ```
 python main_Mono6D.py --class_type Bracket --batch_size 1 --train False ----used_epoch 150 --eval True
 ```
