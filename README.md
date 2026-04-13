@@ -4,5 +4,68 @@ we propose a novel 6D pose estimation method via hybrid representations and mult
 ![Proposed method](https://github.com/nengbinlv/HRMFPose/blob/main/assets/framework.png)
 # Environment Installation
 ## python
-
+```
+conda create --name HRMFPose python=3.8
+conda activate HRMFPose
+# install the pytorch version compatible with the your cuda version
+pip install -r requirements.txt
+```
 ## c++
+Install Visual Studio 2017
+Install Eigen 3, GLEW, GLFW 3, and OpenCV 4
+For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObjectTracking/tree/master?tab=readme-ov-file).
+# Data Preparation
+- Assembly dataset
+
+Download the [assembly dataset](https://pan.baidu.com/s/1UG-D8e1sRRKKn6bi9PeXKg) with extraction code:```6rtd```. Extract it into the ```data``` folder. The file structure is as follows:
+```
+${PROJECT_ROOT}
+ -- data
+     -- part_01
+         |-- edge_occ
+         |-- gtEdge
+         |-- mask
+         |-- model
+         |-- photo_cut
+            |-- train
+            |-- val
+         |--render
+            |-- edge_occ
+            |-- gtEdge
+            |-- mask
+            |-- rgb_bg
+            |-- pose_final.yml
+         |-- gt.yml
+         |-- part_01.txt
+     -- part_02
+         ...
+```
+```gt.yml``` and ```pose_final.yml``` represent the ground truth poses. ```part_01.txt``` defines the keypoints of the target. ```model``` contains the 3D model. Other folders store the corresponding images.
+- Mono6D dataset
+The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://pan.baidu.com/s/14xmeC0hvZp09ajlMMEdmWw). (Extraction code: ```jnsy```).
+# Train
+## Train assembly dataset
+Run the following script
+```
+python main_assembly.py --class_type part_02 --batch_size 6 --train True --epochs 150 --eval False
+```
+## Train Mono6D dataset
+```
+python main_Mono6D.py --class_type Bracket --batch_size 6 --train True --epochs 150 --eval False
+```
+# Evaluation
+## Evaluate assembly dataset
+```
+python main_assembly.py --class_type part_02 --batch_size 1 --train False ----used_epoch 150 --eval True
+```
+## Evaluate Mono6D dataset
+```
+python main_Mono6D.py --class_type Bracket --batch_size 1 --train False ----used_epoch 150 --eval True
+```
+For more metric evaluation methods, please refer to ```CalADDmetric.py```.
+
+# Pose Optimization
+Pose optimization is implemented by running the ```ObjectTracking.cpp``` file. The input of ```pose_txt``` is the initial pose estimation result, which comes from the above prediction. ```rgbImg_path```, ```edgeImg_path```, and ```maskImg_path``` are the paths of the input image, the predicted semantic edge and the mask image, respectively.
+# Multi-object pose correction
+After obtaining the individual poses of multiple assembly parts, pose correction is realized by running ```multipleObjectPose.py```.
+
