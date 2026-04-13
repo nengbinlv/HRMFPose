@@ -16,7 +16,7 @@ Install Visual Studio 2017
 Install Eigen 3, GLEW, GLFW 3, and OpenCV 4
 For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObjectTracking/tree/master?tab=readme-ov-file).
 # Data Preparation
-- Assembly dataset
+## Assembly dataset
 
 Download the [assembly dataset](https://pan.baidu.com/s/1UG-D8e1sRRKKn6bi9PeXKg) with extraction code:```6rtd```. Extract it into the ```data``` folder. The file structure is as follows:
 ```
@@ -42,7 +42,7 @@ ${PROJECT_ROOT}
          ...
 ```
 ```gt.yml``` and ```pose_final.yml``` represent the ground truth poses. ```part_01.txt``` defines the keypoints of the target. ```model``` contains the 3D model. Other folders store the corresponding images.
-- Mono6D dataset
+## Mono6D dataset
 
 The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://pan.baidu.com/s/14xmeC0hvZp09ajlMMEdmWw). (Extraction code: ```jnsy```).
 # Train
