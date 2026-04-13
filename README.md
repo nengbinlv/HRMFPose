@@ -43,6 +43,7 @@ ${PROJECT_ROOT}
 ```
 ```gt.yml``` and ```pose_final.yml``` represent the ground truth poses. ```part_01.txt``` defines the keypoints of the target. ```model``` contains the 3D model. Other folders store the corresponding images.
 - Mono6D dataset
+
 The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://pan.baidu.com/s/14xmeC0hvZp09ajlMMEdmWw). (Extraction code: ```jnsy```).
 # Train
 ## Train assembly dataset
