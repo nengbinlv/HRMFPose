@@ -1,4 +1,5 @@
 # Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly
+The source code in this repository corresponds to our paper submitted to __The Visual Computer__, titled __Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly__.
 # Overview
 we propose a novel 6D pose estimation method via hybrid representations and multi-feature fusion for complex industrial assembly.In the first stage, an initial pose estimation module based on multi-task learning is proposed. This module predicts hybrid representations, including sparse keypoint heatmaps, keypoint relational vectors, keypoint visibilities, semantic edges, and semantic masks of parts. RANSAC+PnP is employed to obtain initial pose estimates. In the second stage, a multi-feature fusion pose optimization method is proposed, which combines learned high-dimensional semantic features with extracted general features and performs iterative optimization to obtain accurate pose results. For multi-object pose estimation in assembly scenarios, a structural constraint strategy is employed to correct the poses.
 ![Proposed method](https://github.com/nengbinlv/HRMFPose/blob/main/assets/framework.png)
@@ -68,4 +69,11 @@ For more metric evaluation methods, please refer to ```CalADDmetric.py```.
 Pose optimization is implemented by running the ```ObjectTracking.cpp``` file. The input of ```pose_txt``` is the initial pose estimation result, which comes from the above prediction. ```rgbImg_path```, ```edgeImg_path```, and ```maskImg_path``` are the paths of the input image, the predicted semantic edge and the mask image, respectively.
 # Multi-object pose correction
 After obtaining the individual poses of multiple assembly parts, pose correction is realized by running ```multipleObjectPose.py```.
+# Visualization
+- Results of assembly dataset
 
+- Results of Mono6D dataset
+# Acknowledgement
+This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
+- [SRT3D](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
+- [ContourPose](https://github.com/ZJU-IVI/ContourPose)
