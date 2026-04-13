@@ -27,7 +27,6 @@ torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
 def train(model, dataloader, optimizer, device, antoWeightedModel, epoch):
-    # 先说明要开始训练了
     model.train()
     total_loss = 0.0
     heatmap_loss_sum = 0.0
@@ -37,15 +36,15 @@ def train(model, dataloader, optimizer, device, antoWeightedModel, epoch):
     mask_loss_num = 0.0
     iter = 0
     start = time.time()
-    # 调用数据载入模块
+
     for data in dataloader:
         iter += 1
         if cuda:
-            # 数据都有那些，将其to到gpu
+
             img, heatmap, K, pose, gt_contour, gt_kpVis, gt_grah, gt_mask, gt_mask_dilate = [x.to(device) for x in data]
         else:
             img, heatmap, K, pose, gt_contour, gt_kpVis, gt_grah, gt_mask, gt_mask_dilate= data
-        # 计算loss，看一下如何计算：输入图像，以及真值的heatmap和contour
+
         loss = model(img, heatmap, gt_contour, gt_kpVis, gt_grah, gt_mask, gt_mask_dilate, epoch)
 
         final_loss = (torch.mean(loss["heatmap_loss"]) + torch.mean(loss["contour_loss"]) + torch.mean(loss["vis_loss"]) +
@@ -73,16 +72,13 @@ def train(model, dataloader, optimizer, device, antoWeightedModel, epoch):
         if iter % 10 == 0:
             print(f'loss:{loss_item:.6f}  heatmap_loss:{heatmap_loss:.6f}  contour_loss:{contour_loss:.6f}  vis_loss:{vis_loss:.6f} '
                   f' grah_loss:{grah_loss:.6f}  mask_loss:{mask_loss:.6f}  '  )  #
-        # 先将梯度归零
+
         optimizer.zero_grad()
-        # 反向传播计算得到每个参数的梯度值
         final_loss.backward()
-        # 通过梯度下降执行一步参数更新
         optimizer.step()
     duration = time.time() - start
     print('Time cost:{}'.format(duration))
 
-    # 返回平均loss
     return (total_loss / len(dataloader.dataset), heatmap_loss_sum / len(dataloader.dataset),\
            contour_loss_sum / len(dataloader.dataset), vis_loss_num / len(dataloader.dataset),
             grah_loss_num / len(dataloader.dataset), mask_loss_num / len(dataloader.dataset))
@@ -157,7 +153,7 @@ def main_test(args):
 
     if args.train:
         train_set = MyDataset(args.data_path, args.class_type, is_train=True)
-        #  drop_last=True 否则aspp会报错
+
         train_loader = DataLoader(train_set, batch_size=args.batch_size, shuffle=True, num_workers=0)
     if args.eval:
         test_set = MyDataset(args.data_path, args.class_type, is_train=False, scene=args.scene, index=args.index)
@@ -188,8 +184,7 @@ def main_test(args):
     model_path = os.path.join(os.getcwd(), "weights", args.class_type)
 
     if args.train:
-        # start_epoch= 1
-        # 载入已经训练的模型
+
         start_epoch = load_network(ContourNet, model_path, optimizer) + 1
 
         for epoch in range(start_epoch, args.epochs + 1):
