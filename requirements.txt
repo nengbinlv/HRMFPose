@@ -1,0 +1,12 @@
+numpy
+scipy
+torch
+tqdm
+opencv-python
+scikit-learn
+Pillow
+PyYAML
+matplotlib
+trimesh
+pyrender
+tensorboard
