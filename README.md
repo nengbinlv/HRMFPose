@@ -71,8 +71,9 @@ Pose optimization is implemented by running the ```ObjectTracking.cpp``` file. T
 After obtaining the individual poses of multiple assembly parts, pose correction is realized by running ```multipleObjectPose.py```.
 # Visualization
 - Results of assembly dataset
-
+![pose1](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose1.png)
 - Results of Mono6D dataset
+![pose2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose2.png)
 # Acknowledgement
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
 - [SRT3D](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
