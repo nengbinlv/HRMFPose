@@ -78,3 +78,13 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
 - [SRT3D](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
 - [ContourPose](https://github.com/ZJU-IVI/ContourPose)
+# Cite
+If you find our work useful, please cite us with:
+```
+@Article{
+  author  = {Nengbin Lv, Zhangmao Xu, Yi Feng, Weikai Zeng, Fuzhou Du},
+  title   = {Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly},
+  note   = {Submitted to The Visual Computer}
+  year    = {2026}
+}
+```
