@@ -67,7 +67,9 @@ python main_assembly.py --class_type part_02 --batch_size 1 --train False ----us
 python main_Mono6D.py --class_type Bracket --batch_size 1 --train False ----used_epoch 150 --eval True
 ```
 For more metric evaluation methods, please refer to ```CalADDmetric.py```.
-
+# Demo
+You can run a demo case by executing ```demo.py```.
+The pre-trained weights can be downloaded from [weights of assembly dataset](https://pan.baidu.com/s/1BJfG62xOJsX2j2F6zkgDjg) (extraction code: ```a5ca```) and [weights of Mono6D dataset](https://pan.baidu.com/s/1mlvNoznYdam17-JY3rjSig) (extraction code:```47ic```), and placed in the ```weights``` folder.
 # Pose Optimization
 Pose optimization is implemented by running the ```ObjectTracking.cpp``` file. The input of ```pose_txt``` is the initial pose estimation result, which comes from the above prediction. ```rgbImg_path```, ```edgeImg_path```, and ```maskImg_path``` are the paths of the input image, the predicted semantic edge and the mask image, respectively.
 # Multi-object pose correction
