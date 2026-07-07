@@ -20,7 +20,7 @@ For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObje
 # Data Preparation
 - ## Industrial Assembly Pose Dataset
 
-Download the [assembly dataset](https://zenodo.org/records/21245467) . Extract it into the ```data``` folder. The file structure is as follows:
+Download the [assembly dataset](https://zenodo.org/records/21245467)(Zenodo link) . Extract it into the ```data``` folder. The file structure is as follows:
 ```
 ${PROJECT_ROOT}
  -- data
@@ -48,7 +48,7 @@ For information on splitting the training and test sets, please refer to ```data
 ![data1](https://github.com/nengbinlv/HRMFPose/blob/main/assets/data1.png)
 - ## Mono6D dataset
 
-The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://zenodo.org/records/21245806). 
+The original source of this dataset is [Mono6D](https://isl.sist.chukyo-u.ac.jp/Archives/Mono-6D.zip). We modified it to fit the structure of the proposed method. The structure is consistent with the assembly dataset. Download link: [Mono6D_ours](https://zenodo.org/records/21245806)(Zenodo link). 
 ![data2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/data2.png)
 # Train
 - ## Train assembly dataset
