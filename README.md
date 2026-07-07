@@ -1,9 +1,11 @@
-# Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly
-The source code in this repository corresponds to our paper submitted to __The Visual Computer__, titled __Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly__.
+# Hybrid Representation and Adaptive Multi-Feature Fusion for Monocular 6D Pose Estimation in Industrial Assembly
+The source code in this repository corresponds to our paper submitted to __The Visual Computer__, titled __Hybrid Representation and Adaptive Multi-Feature Fusion for Monocular 6D Pose Estimation in Industrial Assembly__.
 # Overview
 We propose a novel 6D pose estimation method via hybrid representations and multi-feature fusion for complex industrial assembly.In the first stage, an initial pose estimation module based on multi-task learning is proposed. This module predicts hybrid representations, including sparse keypoint heatmaps, keypoint relational vectors, keypoint visibilities, semantic edges, and semantic masks of parts. RANSAC+PnP is employed to obtain initial pose estimates. In the second stage, a multi-feature fusion pose optimization method is proposed, which combines learned high-dimensional semantic features with extracted general features and performs iterative optimization to obtain accurate pose results. For multi-object pose estimation in assembly scenarios, a structural constraint strategy is employed to correct the poses.
 ![Proposed method](https://github.com/nengbinlv/HRMFPose/blob/main/assets/framework_2.png)
 # Environment Installation
+- ## Hardware Environment
+windows 11
 - ## python
 ```
 conda create --name HRMFPose python=3.8
@@ -16,7 +18,7 @@ Install Visual Studio 2017
 Install Eigen 3, GLEW, GLFW 3, and OpenCV 4
 For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObjectTracking/tree/master?tab=readme-ov-file).
 # Data Preparation
-- ## Assembly dataset
+- ## Industrial Assembly Pose Dataset
 
 Download the [assembly dataset](https://pan.baidu.com/s/1UG-D8e1sRRKKn6bi9PeXKg) with extraction code:```6rtd```. Extract it into the ```data``` folder. The file structure is as follows:
 ```
