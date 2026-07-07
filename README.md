@@ -44,6 +44,7 @@ ${PROJECT_ROOT}
          ...
 ```
 ```gt.yml``` and ```pose_final.yml``` represent the ground truth poses. ```part_01.txt``` defines the keypoints of the target. ```model``` contains the 3D model. Other folders store the corresponding images.
+For information on splitting the training and test sets, please refer to ```dataSplit.py```.
 ![data1](https://github.com/nengbinlv/HRMFPose/blob/main/assets/data1.png)
 - ## Mono6D dataset
 
