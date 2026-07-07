@@ -91,7 +91,7 @@ If you find our work useful, please cite us with:
 ```
 @Article{
   author  = {Nengbin Lv, Zhangmao Xu, Yi Feng, Weikai Zeng, Fuzhou Du},
-  title   = {Hybrid Representation and Multi-Feature Fusion for Robust 6D Pose Estimation in Industrial Assembly},
+  title   = {Hybrid Representation and Adaptive Multi-Feature Fusion for Monocular 6D Pose Estimation in Industrial Assembly},
   note   = {Submitted to The Visual Computer}
   year    = {2026}
 }
