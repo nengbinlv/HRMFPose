@@ -82,6 +82,16 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 ![pose1](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose1.png)
 - Results of Mono6D dataset
 ![pose2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose2.png)
+# Ranking of Methods
+**ADD Ranking on the Industrial Assembly Pose Dataset**
+| Methods | ADD |
+|---|---:|
+| Proposed method | 87.46 |
+| MegaPose | 86.11 |
+| ContourPose | 80.99 |
+| PSGMN | 75.60 |
+| IndusPose | 63.29 |
+| PVNet | 57.38 |
 # Acknowledgement
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
 - [SRT3D](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
