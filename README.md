@@ -92,6 +92,16 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 | PSGMN | 75.60 |
 | IndusPose | 63.29 |
 | PVNet | 57.38 |
+**ADD Ranking on the Mono6D Dataset**
+| Methods | ADD |
+|---|---:|
+| Proposed method | 91.82 |
+| ContourPose | 73.58 |
+| MegaPose | 43.15 |
+| PSGMN | 34.97 |
+| IndusPose | 24.74 |
+| PVNet | 6.40 |
+
 # Acknowledgement
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
 - [SRT3D](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
