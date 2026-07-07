@@ -92,6 +92,7 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 | PSGMN | 75.60 |
 | IndusPose | 63.29 |
 | PVNet | 57.38 |
+
 **ADD Ranking on the Mono6D Dataset**
 | Methods | ADD |
 |---|---:|
