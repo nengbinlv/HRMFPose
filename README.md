@@ -20,7 +20,7 @@ For details, please refer to [3DObjectTracking](https://github.com/DLR-RM/3DObje
 # Data Preparation
 - ## Industrial Assembly Pose Dataset
 
-Download the [assembly dataset](https://pan.baidu.com/s/1UG-D8e1sRRKKn6bi9PeXKg) with extraction code:```6rtd```. Extract it into the ```data``` folder. The file structure is as follows:
+Download the [assembly dataset](https://zenodo.org/records/21245467) . Extract it into the ```data``` folder. The file structure is as follows:
 ```
 ${PROJECT_ROOT}
  -- data
