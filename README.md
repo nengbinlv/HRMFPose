@@ -6,6 +6,7 @@ We propose a novel 6D pose estimation method via hybrid representations and mult
 # Environment Installation
 - ## Hardware Environment
 windows 11
+NVIDIA GeForce RTX 3060
 - ## python
 ```
 conda create --name HRMFPose python=3.8
@@ -73,6 +74,7 @@ For more metric evaluation methods, please refer to ```CalADDmetric.py```.
 # Demo
 You can run a demo case by executing ```demo.py```.
 The pre-trained weights can be downloaded from [weights of assembly dataset](https://pan.baidu.com/s/1BJfG62xOJsX2j2F6zkgDjg) (extraction code: ```a5ca```) and [weights of Mono6D dataset](https://pan.baidu.com/s/1mlvNoznYdam17-JY3rjSig) (extraction code:```47ic```), and placed in the ```weights``` folder.
+The algorithm's inference time is approximately 55 ms.
 # Pose Optimization
 Pose optimization is implemented by running the ```ObjectTracking.cpp``` file. The input of ```pose_txt``` is the initial pose estimation result, which comes from the above prediction. ```rgbImg_path```, ```edgeImg_path```, and ```maskImg_path``` are the paths of the input image, the predicted semantic edge and the mask image, respectively.
 # Multi-object pose correction
