@@ -86,22 +86,22 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 **ADD Ranking on the Industrial Assembly Pose Dataset**
 | Methods | ADD |
 |---|---:|
-| Proposed method | 87.46 |
-| MegaPose | 86.11 |
-| ContourPose | 80.99 |
-| PSGMN | 75.60 |
-| IndusPose | 63.29 |
-| PVNet | 57.38 |
+| Proposed method |   87.46   |
+| MegaPose |   86.11   |
+| ContourPose |   80.99   |
+| PSGMN |   75.60   |
+| IndusPose |   63.29   |
+| PVNet |   57.38   |
 
 **ADD Ranking on the Mono6D Dataset**
 | Methods | ADD |
 |---|---:|
-| Proposed method | 91.82 |
-| ContourPose | 73.58 |
-| MegaPose | 43.15 |
-| PSGMN | 34.97 |
-| IndusPose | 24.74 |
-| PVNet | 6.40 |
+| Proposed method |   91.82   |
+| ContourPose |   73.58   |
+| MegaPose |   43.15   |
+| PSGMN |   34.97   |
+| IndusPose |   24.74   |
+| PVNet |   6.40   |
 
 # Acknowledgement
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
