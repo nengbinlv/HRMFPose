@@ -73,7 +73,7 @@ python main_Mono6D.py --class_type Bracket --batch_size 1 --train False ----used
 For more metric evaluation methods, please refer to ```CalADDmetric.py```.
 # Demo
 You can run a demo case by executing ```demo.py```.
-The pre-trained weights can be downloaded from [weights of assembly dataset](https://pan.baidu.com/s/1BJfG62xOJsX2j2F6zkgDjg) (extraction code: ```a5ca```) and [weights of Mono6D dataset](https://pan.baidu.com/s/1mlvNoznYdam17-JY3rjSig) (extraction code:```47ic```), and placed in the ```weights``` folder.
+The pre-trained weights can be downloaded from [weights of assembly dataset](https://zenodo.org/records/21246146)  and [weights of Mono6D dataset](https://zenodo.org/records/21246237), and placed in the ```weights``` folder.
 
 The algorithm's inference time is approximately 55 ms.
 # Pose Optimization
