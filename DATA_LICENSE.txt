@@ -1,3 +1,0 @@
-The self-built assembly dataset, including images, annotations, pose ground truth, and related metadata, is released under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). The dataset may be used, shared, and adapted for non-commercial research and academic purposes, provided that appropriate credit is given.
-
-For details, please refer to the official license: https://creativecommons.org/licenses/by-nc/4.0/
