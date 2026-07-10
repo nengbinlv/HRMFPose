@@ -97,14 +97,14 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 | PVNet |   57.38   |
 
 **Leaderboard on the Mono6D Dataset**
-| Methods | ADD |
-|---|---:|
-| Proposed method |   91.82   |
-| ContourPose |   73.58   |
-| MegaPose |   43.15   |
-| PSGMN |   34.97   |
-| IndusPose |   24.74   |
-| PVNet |   6.40   |
+| Methods | ADD | 2D Projection | 5 cm/5° |
+|---|---:|---:|---:|
+| Ours | **91.82** (1) | **95.04** (1) | **98.30** (1) |
+| ContourPose | 73.58 (2) | 91.88 (2) | 90.90 (2) |
+| MegaPose | 43.15 (3) | 45.06 (4) | 54.88 (3) |
+| PSGMN | 34.97 (4) | 66.19 (3) | 50.87 (4) |
+| IndusPose | 24.74 (5) | 24.32 (5) | 33.88 (5) |
+| PVNet | 6.40 (6) | 7.61 (6) | 6.45 (6) |
 
 # Acknowledgement
 This work is developed on the basis of the following projects. We would like to express our sincere gratitude to the authors for their high-quality open-source contributions.
