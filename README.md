@@ -87,14 +87,15 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 ![pose2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose2.png)
 # Leaderboard of Methods
 **Leaderboard on the Industrial Assembly Pose Dataset**
-| Methods | ADD |
-|---|---:|
-| Proposed method |   87.46   |
-| MegaPose |   86.11   |
-| ContourPose |   80.99   |
-| PSGMN |   75.60   |
-| IndusPose |   63.29   |
-| PVNet |   57.38   |
+| Methods | ADD | 2D Projection | 5 cm/5° |
+|---|---:|---:|---:|
+| Ours+ | **87.46** (1) | **99.33** (1) | **86.83** (1) |
+| MegaPose | 86.11 (2) | 96.27 (5) | 76.11 (3) |
+| Ours | 83.25 (3) | 99.25 (2) | 81.27 (2) |
+| ContourPose | 80.99 (4) | 98.85 (4) | 74.33 (4) |
+| PSGMN | 75.60 (5) | 99.09 (3) | 62.58 (5) |
+| IndusPose | 63.29 (6) | 85.16 (7) | 43.77 (7) |
+| PVNet | 57.38 (7) | 95.99 (6) | 44.64 (6) |
 
 **Leaderboard on the Mono6D Dataset**
 | Methods | ADD | 2D Projection | 5 cm/5° |
