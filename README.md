@@ -86,6 +86,7 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 - Results of Mono6D dataset
 ![pose2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose2.png)
 # Leaderboard of Methods
+The “Ours+” notation indicates that there are structural constraints in the method.
 **Leaderboard on the Industrial Assembly Pose Dataset**
 | Methods | ADD | 2D Projection | 5 cm/5° |
 |---|---:|---:|---:|
