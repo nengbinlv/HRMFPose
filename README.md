@@ -85,8 +85,8 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 ![pose1](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose1.png)
 - Results of Mono6D dataset
 ![pose2](https://github.com/nengbinlv/HRMFPose/blob/main/assets/pose2.png)
-# Ranking of Methods
-**ADD Metric Ranking on the Industrial Assembly Pose Dataset**
+# Leaderboard of Methods
+**Leaderboard on the Industrial Assembly Pose Dataset**
 | Methods | ADD |
 |---|---:|
 | Proposed method |   87.46   |
@@ -96,7 +96,7 @@ After obtaining the individual poses of multiple assembly parts, pose correction
 | IndusPose |   63.29   |
 | PVNet |   57.38   |
 
-**ADD Metric Ranking on the Mono6D Dataset**
+**Leaderboard on the Mono6D Dataset**
 | Methods | ADD |
 |---|---:|
 | Proposed method |   91.82   |
